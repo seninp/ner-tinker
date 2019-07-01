@@ -1,0 +1,6 @@
+$ docker images
+REPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
+neras_v0                 live                9bb502f8d06b        2 minutes ago       9.19GB
+neras_v3                 latest              b53d29759d94        2 hours ago         4.22GB
+neras_v0                 latest              3999edddf0cc        21 hours ago        4.21GB
+consol/ubuntu-xfce-vnc   latest              a86ae35bf09a        8 months ago        1.18GB
