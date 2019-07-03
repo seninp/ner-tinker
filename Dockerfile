@@ -14,11 +14,12 @@ RUN apt-get update
 RUN apt-get install -y libreadline-gplv2-dev build-essential gfortran checkinstall software-properties-common llvm libc6-dev cmake \
     wget git vim nasm yasm zip unzip pkg-config gdebi-core \
     libxml2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libbz2-dev \
-    apt-utils apt-transport-https libapparmor1 libcurl4-openssl-dev libssl1.0.0
+    apt-utils apt-transport-https libapparmor1 libcurl4-openssl-dev libssl1.0.0 \
+    mesa-common-dev libx11-xcb1 libglu1-mesa-dev
 
 # install R
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
+RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu xenial-cran35/'
 RUN apt-get install -y r-base r-base-dev
 RUN wget https://download1.rstudio.org/desktop/xenial/amd64/rstudio-1.2.1335-amd64.deb
 RUN gdebi -n rstudio-1.2.1335-amd64.deb
